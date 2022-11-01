@@ -13,5 +13,19 @@ namespace Calculator
         {
             return minuend - subtrahend;
         }
+
+         public int Multiply(int firstNum, int secondNum)
+        {
+            return firstNum * secondNum;
+        }
+
+        public int Divide(int firstNum, int secondNum)
+        {
+            if(secondNum == 0){
+                return "Cant divide by 0";
+            } else {
+                return firstNum / secondNum;
+            }
+        }
     }
 }

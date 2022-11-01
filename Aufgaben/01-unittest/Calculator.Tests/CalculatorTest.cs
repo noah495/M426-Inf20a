@@ -36,5 +36,54 @@ namespace Calculator.Tests
             // Then
             Assert.Equal(expected, actual);
         }
+
+         [Fact]
+        public void TestMultiplySixWithThreeIsEighteen()
+        {
+            // Given
+            int a = 6;
+            int b = 3;
+            int expected = 18;
+            Calculator calculator = new Calculator();
+
+            // When
+            int actual = calculator.Multiply(a, b);
+
+            // Then
+            Assert.Equal(expected, actual);
+        }
+
+
+         [Fact]
+        public void TestDivideSixByTwoIsThree()
+        {
+            // Given
+            int a = 6;
+            int b = 2;
+            int expected = 3;
+            Calculator calculator = new Calculator();
+
+            // When
+            int actual = calculator.Divide(a, b);
+
+            // Then
+            Assert.Equal(expected, actual);
+        }
+
+         [Fact]
+        public void TestDivideSixByZeroIsErrorMessage()
+        {
+            // Given
+            int a = 6;
+            int b = 0;
+            int expected = "Cant divide by 0";
+            Calculator calculator = new Calculator();
+
+            // When
+            int actual = calculator.Divide(a, b);
+
+            // Then
+            Assert.Equal(expected, actual);
+        }
     }
 }
